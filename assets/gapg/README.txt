@@ -1,1 +1,1 @@
-Put GAPG demo.mp4 in this folder.
+Put GAPG demo.mp4 here.

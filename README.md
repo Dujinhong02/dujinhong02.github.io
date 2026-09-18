@@ -1,60 +1,59 @@
-# Jinhong Du — Personal Research Website
+# Jinhong Du — Academic Homepage
 
-A lightweight academic/research portfolio for robotic manipulation, 3D perception, grasping, reinforcement learning, and Sim2Real.
+This version uses a compact robotics/academic-homepage structure:
 
-## 1. Add your demo videos
+1. Profile + short research bio
+2. Research interests
+3. News
+4. Selected research with demo videos
+5. Education
+6. Skills
 
-Put your MP4 files here:
+It is intentionally simple and publication-focused.
+
+## Replace your portrait
+
+The page currently uses:
 
 ```text
-assets/
-├── gapg/
-│   └── demo.mp4
-├── supergrasp/
-│   └── demo.mp4
-└── pushpoint/
-    └── demo.mp4
+assets/profile-placeholder.svg
 ```
 
-The page will autoplay them muted, loop them, and keep native controls available.
+Put your portrait in `assets/profile.jpg` and change this line in `index.html`:
 
-Recommended export:
+```html
+<img src="assets/profile-placeholder.svg" alt="Jinhong Du" />
+```
 
+to:
+
+```html
+<img src="assets/profile.jpg" alt="Jinhong Du" />
+```
+
+A square-ish or portrait photo works best.
+
+## Add demo videos
+
+```text
+assets/gapg/demo.mp4
+assets/supergrasp/demo.mp4
+assets/pushpoint/demo.mp4
+```
+
+Recommended:
 - MP4 / H.264
-- 1080p or 720p
-- 10–30 seconds
-- muted-friendly (the site autoplays muted)
-- keep each video reasonably small for faster loading
+- 4:3 or 16:9
+- about 10–30 seconds
+- compressed for web
 
-## 2. Replace placeholder links
+## Replace links
 
-Open `index.html` and search for:
+Search `index.html` for `YOUR_` and replace the placeholders.
 
-- `YOUR_GAPG_PAPER_URL`
-- `YOUR_GAPG_VIDEO_URL`
-- `YOUR_SUPERGRASP_PAPER_URL`
-- `YOUR_SUPERGRASP_CODE_URL`
-- `YOUR_SUPERGRASP_VIDEO_URL`
-- `YOUR_PUSHPOINT_PROJECT_URL`
-- `YOUR_PUSHPOINT_VIDEO_URL`
+## Deploy
 
-Replace them with your real links.
-
-## 3. CV
-
-`assets/cv.pdf` is included from the resume supplied when this site was generated.
-
-**Privacy note:** review the PDF before publishing. If it contains a phone number or other information you do not want public on the internet, replace it with a public-safe CV.
-
-## 4. Publish with GitHub Pages
-
-If your GitHub username is `example`, create a public repository named:
-
-```text
-example.github.io
-```
-
-Upload everything in this project to the repository root:
+For your current GitHub Pages repository, replace the existing website files with:
 
 ```text
 index.html
@@ -63,34 +62,4 @@ script.js
 assets/
 ```
 
-Then go to:
-
-`Repository → Settings → Pages`
-
-Choose:
-
-- Source: **Deploy from a branch**
-- Branch: **main**
-- Folder: **/(root)**
-
-Your website will be available at:
-
-```text
-https://example.github.io
-```
-
-## 5. Preview locally
-
-You can double-click `index.html`, or serve it with Python:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-## Customize
-
-- Main content: `index.html`
-- Visual design: `style.css`
-- Mobile menu / animation / video fallback: `script.js`
+Commit to `main`. GitHub Pages will redeploy automatically.

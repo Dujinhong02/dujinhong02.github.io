@@ -1,387 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jinhong Du — Robotic Manipulation, 3D Perception, Grasping, Reinforcement Learning, and Sim2Real." />
-  <meta name="theme-color" content="#f7f8fa" />
-  <title>Jinhong Du | Robotic Manipulation</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jinhong Du — robotic manipulation, 3D perception, grasping and Sim2Real." />
+  <title>Jinhong Du</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="site-header" id="top">
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="#top">Jinhong Du</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
-    </nav>
-  </header>
+  <main class="page">
 
-  <main>
-    <section class="hero shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">ROBOTIC MANIPULATION · 3D PERCEPTION · SIM2REAL</p>
-        <h1>
-          Building robots that can
-          <span class="accent">perceive, rearrange, and grasp</span>
-          in complex clutter.
-        </h1>
-        <p class="hero-lede">
-          I am <strong>Jinhong Du</strong>, a Master's student at South China University of Technology.
-          My work focuses on robotic grasping and manipulation in cluttered environments,
-          with an emphasis on point-cloud perception, push-grasp synergy, reinforcement learning,
-          and real-world robot deployment.
+    <!-- =========================================================
+         PROFILE
+         ========================================================= -->
+    <section class="profile">
+      <div class="portrait">
+        <img src="assets/profile-placeholder.svg" alt="Jinhong Du" />
+      </div>
+
+      <div class="bio">
+        <h1>Jinhong Du <span class="cn-name">杜锦鸿</span></h1>
+
+        <p>
+          I am a Master's student in the
+          <strong>School of Automation Science and Engineering</strong> at
+          <strong>South China University of Technology</strong>.
         </p>
 
-        <div class="hero-actions">
-          <a class="button primary" href="#research">View Research</a>
-          <a class="button secondary" href="#publications">Publications</a>
-          <a class="button ghost" href="assets/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
-        </div>
+        <p>
+          My research focuses on <strong>robotic manipulation in cluttered environments</strong>,
+          including 3D point-cloud perception, robotic grasping, push-grasp synergy,
+          reinforcement learning, and Sim2Real deployment.
+        </p>
 
-        <div class="status-row" aria-label="Research highlights">
-          <span>ICRA 2026 Accepted</span>
-          <span>IEEE RA-L Minor Revision</span>
-          <span>UR5e / ROKAE Deployment</span>
-        </div>
-      </div>
+        <p>
+          I am interested in building robots that can go beyond passive grasp prediction:
+          when a target is occluded or difficult to grasp, the robot should actively
+          <strong>rearrange the scene and create a better grasp opportunity</strong>.
+        </p>
 
-      <div class="hero-visual reveal" aria-hidden="true">
-        <canvas id="pointCloudCanvas"></canvas>
-        <div class="visual-label label-a">Point Cloud</div>
-        <div class="visual-label label-b">Grasp Pose</div>
-        <div class="visual-label label-c">Push → Grasp</div>
-      </div>
-    </section>
-
-    <section class="section shell" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow">ABOUT</p>
-        <h2>Researching active robotic manipulation beyond single-step grasping.</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>
-            My research targets dense, occluded, and geometrically incomplete scenes where
-            direct grasping is unreliable. I study how robots can combine
-            <strong>grasp generation, grasp evaluation, pose refinement, and non-prehensile actions</strong>
-            to actively transform a difficult scene into a graspable one.
-          </p>
-          <p>
-            I have experience with simulation data generation, point-cloud learning,
-            reinforcement learning, and zero-shot Sim2Real deployment on industrial robot platforms.
-          </p>
-        </div>
-
-        <div class="focus-grid reveal">
-          <article class="mini-card">
-            <span class="mini-index">01</span>
-            <h3>3D Perception</h3>
-            <p>Point clouds, geometric context, PointNet/PointNet++, GraspNet, superquadrics.</p>
-          </article>
-          <article class="mini-card">
-            <span class="mini-index">02</span>
-            <h3>Robotic Grasping</h3>
-            <p>6D/7D grasp generation, evaluation, refinement, collision-aware grasping.</p>
-          </article>
-          <article class="mini-card">
-            <span class="mini-index">03</span>
-            <h3>Active Manipulation</h3>
-            <p>Push-grasp synergy and goal-oriented non-prehensile manipulation.</p>
-          </article>
-          <article class="mini-card">
-            <span class="mini-index">04</span>
-            <h3>Sim2Real</h3>
-            <p>PyBullet, ROS, MoveIt, UR5e and ROKAE xMate ER7Pro deployment.</p>
-          </article>
+        <div class="contact-links">
+          <a href="mailto:djh020503@gmail.com">Email</a>
+          <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="assets/cv.pdf" target="_blank" rel="noreferrer">CV</a>
+          <a href="YOUR_GOOGLE_SCHOLAR_URL" target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
       </div>
     </section>
 
-    <section class="section shell" id="research">
-      <div class="section-heading reveal">
-        <p class="eyebrow">SELECTED RESEARCH</p>
-        <h2>From push-grasp coordination to industrial bin picking.</h2>
-        <p class="section-intro">
-          Replace each placeholder video with your own MP4. The page will autoplay the demos silently and loop them.
-        </p>
-      </div>
+    <!-- =========================================================
+         RESEARCH INTERESTS
+         ========================================================= -->
+    <section>
+      <h2>Research Interests</h2>
+      <ul class="interest-list">
+        <li>
+          <strong>Robotic Grasping:</strong>
+          6D/7D grasp generation, evaluation, refinement, and collision-aware grasping.
+        </li>
+        <li>
+          <strong>Active Manipulation:</strong>
+          push-grasp synergy and goal-oriented non-prehensile manipulation in clutter.
+        </li>
+        <li>
+          <strong>3D Perception:</strong>
+          point-cloud representation, PointNet/PointNet++, GraspNet, and geometric priors.
+        </li>
+        <li>
+          <strong>Robot Learning &amp; Sim2Real:</strong>
+          reinforcement learning, simulation data generation, and real-robot deployment.
+        </li>
+      </ul>
+    </section>
 
-      <article class="project reveal">
-        <div class="demo-wrap">
-          <video class="project-video" autoplay muted loop playsinline controls preload="metadata">
+    <!-- =========================================================
+         NEWS
+         ========================================================= -->
+    <section>
+      <h2>News</h2>
+      <div class="news">
+        <div class="news-row">
+          <span class="news-date">2026</span>
+          <span><strong>GAPG</strong> was accepted by <strong>IEEE ICRA 2026</strong>.</span>
+        </div>
+        <div class="news-row">
+          <span class="news-date">2026</span>
+          <span><strong>SuperGrasp</strong> received <strong>Minor Revision</strong> at IEEE RA-L.</span>
+        </div>
+        <div class="news-row">
+          <span class="news-date">2026.04</span>
+          <span>
+            Started an industry collaboration on highly autonomous robotic picking for
+            large-scale SKUs using UR5e.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SELECTED RESEARCH / PUBLICATIONS
+         ========================================================= -->
+    <section id="publications">
+      <h2>Selected Research</h2>
+
+      <!-- GAPG -->
+      <article class="pub">
+        <div class="pub-media video-box">
+          <video autoplay muted loop playsinline controls preload="metadata">
             <source src="assets/gapg/demo.mp4" type="video/mp4" />
           </video>
-          <div class="video-fallback">
-            <span>GAPG DEMO</span>
-            <small>Place video at assets/gapg/demo.mp4</small>
+          <div class="video-placeholder">
+            <strong>GAPG Demo</strong>
+            <span>assets/gapg/demo.mp4</span>
           </div>
         </div>
 
-        <div class="project-copy">
-          <div class="project-meta">
-            <span class="pill">ICRA 2026 · Accepted</span>
-            <span class="project-number">01</span>
-          </div>
-          <h3>GAPG</h3>
-          <p class="project-subtitle">
-            Geometry-Aware Push-Grasping Synergy for Goal-Oriented Manipulation in Clutter
-          </p>
-          <p>
-            A geometry-aware push-grasp framework for cluttered scenes that jointly evaluates
-            grasp feasibility and the benefit of pushing, allowing the robot to actively rearrange
-            a scene before attempting a target grasp.
+        <div class="pub-info">
+          <h3>GAPG: Geometry-Aware Push-Grasping Synergy for Goal-Oriented Manipulation in Clutter</h3>
+          <p class="authors"><strong>Jinhong Du</strong>, et al.</p>
+          <p class="venue"><strong>IEEE ICRA 2026</strong> · Accepted</p>
+
+          <p class="description">
+            A geometry-aware push-grasp framework for dense clutter. GAPG jointly evaluates
+            grasp feasibility and pushing benefit, allowing the robot to actively rearrange
+            clutter before grasping the target.
           </p>
 
-          <div class="metrics">
-            <div><strong>&gt;90%</strong><span>Grasp success</span></div>
-            <div><strong>&gt;95%</strong><span>Task completion</span></div>
-            <div><strong>80k</strong><span>Training samples</span></div>
-          </div>
+          <p class="result">
+            <strong>&gt;90%</strong> grasp success ·
+            <strong>&gt;95%</strong> task completion ·
+            zero-shot Sim2Real on ROKAE xMate ER7Pro.
+          </p>
 
-          <div class="tags">
-            <span>PointNet++</span><span>GraspNet</span><span>PyBullet</span><span>Sim2Real</span><span>ROKAE</span>
-          </div>
-
-          <div class="project-links">
-            <a href="YOUR_GAPG_PAPER_URL" target="_blank" rel="noreferrer">Paper ↗</a>
-            <a href="https://github.com/xiaolijz/GAPG" target="_blank" rel="noreferrer">Code ↗</a>
-            <a href="YOUR_GAPG_VIDEO_URL" target="_blank" rel="noreferrer">Video ↗</a>
+          <div class="pub-links">
+            <a href="YOUR_GAPG_PAPER_URL" target="_blank" rel="noreferrer">Paper</a>
+            <a href="https://github.com/xiaolijz/GAPG" target="_blank" rel="noreferrer">Code</a>
+            <a href="YOUR_GAPG_PROJECT_URL" target="_blank" rel="noreferrer">Project</a>
+            <a href="YOUR_GAPG_VIDEO_URL" target="_blank" rel="noreferrer">Video</a>
           </div>
         </div>
       </article>
 
-      <article class="project reverse reveal">
-        <div class="demo-wrap">
-          <video class="project-video" autoplay muted loop playsinline controls preload="metadata">
+      <!-- SUPERGRASP -->
+      <article class="pub">
+        <div class="pub-media video-box">
+          <video autoplay muted loop playsinline controls preload="metadata">
             <source src="assets/supergrasp/demo.mp4" type="video/mp4" />
           </video>
-          <div class="video-fallback">
-            <span>SUPERGRASP DEMO</span>
-            <small>Place video at assets/supergrasp/demo.mp4</small>
+          <div class="video-placeholder">
+            <strong>SuperGrasp Demo</strong>
+            <span>assets/supergrasp/demo.mp4</span>
           </div>
         </div>
 
-        <div class="project-copy">
-          <div class="project-meta">
-            <span class="pill">IEEE RA-L · Minor Revision</span>
-            <span class="project-number">02</span>
-          </div>
-          <h3>SuperGrasp</h3>
-          <p class="project-subtitle">
-            Single-View Object Grasping via Superquadric Similarity Matching, Evaluation, and Refinement
-          </p>
-          <p>
-            A single-view point-cloud grasping framework that transfers preliminary grasp poses
-            through superquadric similarity matching, then evaluates and refines them with an
-            anchor-guided E-RNet using gripper-closure geometry and local context.
+        <div class="pub-info">
+          <h3>SuperGrasp: Single-View Object Grasping via Superquadric Similarity Matching, Evaluation, and Refinement</h3>
+          <p class="authors"><strong>Jinhong Du</strong>, et al.</p>
+          <p class="venue"><strong>IEEE Robotics and Automation Letters</strong> · Minor Revision</p>
+
+          <p class="description">
+            A single-view point-cloud grasping framework that generates grasp candidates through
+            superquadric similarity matching and evaluates/refines them using an anchor-guided E-RNet.
           </p>
 
-          <div class="metrics">
-            <div><strong>94.12%</strong><span>Grasp success</span></div>
-            <div><strong>96.00%</strong><span>Task success</span></div>
-            <div><strong>0.713 s</strong><span>Inference time</span></div>
-          </div>
+          <p class="result">
+            <strong>94.12%</strong> grasp success ·
+            <strong>96.00%</strong> task success ·
+            <strong>0.713 s</strong> inference time.
+          </p>
 
-          <div class="tags">
-            <span>PointNet++</span><span>Superquadrics</span><span>ROS</span><span>Point Cloud</span><span>ROKAE</span>
-          </div>
-
-          <div class="project-links">
-            <a href="YOUR_SUPERGRASP_PAPER_URL" target="_blank" rel="noreferrer">Paper ↗</a>
-            <a href="YOUR_SUPERGRASP_CODE_URL" target="_blank" rel="noreferrer">Code ↗</a>
-            <a href="YOUR_SUPERGRASP_VIDEO_URL" target="_blank" rel="noreferrer">Video ↗</a>
+          <div class="pub-links">
+            <a href="YOUR_SUPERGRASP_PAPER_URL" target="_blank" rel="noreferrer">Paper</a>
+            <a href="YOUR_SUPERGRASP_CODE_URL" target="_blank" rel="noreferrer">Code</a>
+            <a href="YOUR_SUPERGRASP_PROJECT_URL" target="_blank" rel="noreferrer">Project</a>
+            <a href="YOUR_SUPERGRASP_VIDEO_URL" target="_blank" rel="noreferrer">Video</a>
           </div>
         </div>
       </article>
 
-      <article class="project reveal">
-        <div class="demo-wrap">
-          <video class="project-video" autoplay muted loop playsinline controls preload="metadata">
+      <!-- PUSHPOINT -->
+      <article class="pub">
+        <div class="pub-media video-box">
+          <video autoplay muted loop playsinline controls preload="metadata">
             <source src="assets/pushpoint/demo.mp4" type="video/mp4" />
           </video>
-          <div class="video-fallback">
-            <span>SUPERGRASP+ / PUSHPOINT DEMO</span>
-            <small>Place video at assets/pushpoint/demo.mp4</small>
+          <div class="video-placeholder">
+            <strong>SuperGrasp+ / PushPoint Demo</strong>
+            <span>assets/pushpoint/demo.mp4</span>
           </div>
         </div>
 
-        <div class="project-copy">
-          <div class="project-meta">
-            <span class="pill">Industrial Bin Picking</span>
-            <span class="project-number">03</span>
-          </div>
-          <h3>SuperGrasp+ &amp; PushPoint</h3>
-          <p class="project-subtitle">
-            Autonomous Robotic Picking for Large-Scale SKU Warehousing
-          </p>
-          <p>
-            SuperGrasp+ improves grasp reliability by jointly predicting gripper-width correction
-            and collision risk. PushPoint models the target, nearby objects, and bin walls and uses
-            SAC to learn goal-oriented non-prehensile actions that turn ungraspable states into graspable ones.
+        <div class="pub-info">
+          <h3>SuperGrasp+ &amp; PushPoint: Autonomous Picking for Large-Scale SKU Warehousing</h3>
+          <p class="authors"><strong>Project Owner</strong> · Industry Collaboration</p>
+          <p class="venue">Robotic Bin Picking · UR5e · 2026–Present</p>
+
+          <p class="description">
+            SuperGrasp+ predicts gripper-width correction and collision risk for robust grasping.
+            PushPoint uses SAC to learn goal-oriented non-prehensile actions that turn difficult
+            grasp states into graspable ones.
           </p>
 
-          <div class="metrics">
-            <div><strong>&gt;80%</strong><span>Grasp-only bin clear</span></div>
-            <div><strong>&gt;95%</strong><span>With PushPoint</span></div>
-            <div><strong>50+</strong><span>Unseen items</span></div>
-          </div>
+          <p class="result">
+            <strong>&gt;80%</strong> bin-clear success with grasping only ·
+            <strong>&gt;95%</strong> with PushPoint ·
+            tested on <strong>50+ unseen items</strong>.
+          </p>
 
-          <div class="tags">
-            <span>SAC</span><span>PyBullet</span><span>UR5e</span><span>Reinforcement Learning</span><span>Sim2Real</span>
-          </div>
-
-          <div class="project-links">
-            <a href="YOUR_PUSHPOINT_PROJECT_URL" target="_blank" rel="noreferrer">Project ↗</a>
-            <a href="YOUR_PUSHPOINT_VIDEO_URL" target="_blank" rel="noreferrer">Video ↗</a>
+          <div class="pub-links">
+            <a href="YOUR_PUSHPOINT_PROJECT_URL" target="_blank" rel="noreferrer">Project</a>
+            <a href="YOUR_PUSHPOINT_VIDEO_URL" target="_blank" rel="noreferrer">Video</a>
           </div>
         </div>
       </article>
     </section>
 
-    <section class="section shell" aria-labelledby="journey-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow">RESEARCH JOURNEY</p>
-        <h2 id="journey-title">A consistent path toward active manipulation.</h2>
+    <!-- =========================================================
+         EDUCATION
+         ========================================================= -->
+    <section>
+      <h2>Education</h2>
+
+      <div class="education-row">
+        <div>
+          <strong>South China University of Technology</strong>
+          <div>Master's, Electronic Information · School of Automation Science and Engineering</div>
+        </div>
+        <div class="education-date">2024–2027</div>
       </div>
 
-      <div class="journey reveal">
-        <div class="journey-step">
-          <span>01</span>
-          <h3>GAPG</h3>
-          <p>Push-Grasp Synergy</p>
+      <div class="education-row">
+        <div>
+          <strong>Jinan University</strong>
+          <div>Bachelor's, Automation · International Energy College</div>
         </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <span>02</span>
-          <h3>SuperGrasp</h3>
-          <p>Generate · Evaluate · Refine</p>
-        </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <span>03</span>
-          <h3>SuperGrasp+ / PushPoint</h3>
-          <p>Industrial Active Manipulation</p>
-        </div>
+        <div class="education-date">2020–2024</div>
       </div>
+    </section>
 
-      <p class="journey-line reveal">
-        <strong>Grasp → Evaluate → Rearrange → Grasp</strong>
+    <!-- =========================================================
+         SKILLS
+         ========================================================= -->
+    <section>
+      <h2>Skills</h2>
+      <p class="skills">
+        <strong>Robotics:</strong> 3D point clouds, 7D grasping, GraspNet, ROS, MoveIt, Sim2Real,
+        UR5e, ROKAE xMate ER7Pro<br />
+        <strong>Learning:</strong> PointNet, PointNet++, SAC, PPO, TD3, ACT, Diffusion Policy<br />
+        <strong>Tools:</strong> Python, PyTorch, PyBullet, Isaac Gym, SolidWorks
       </p>
     </section>
 
-    <section class="section shell" id="publications">
-      <div class="section-heading reveal">
-        <p class="eyebrow">PUBLICATIONS</p>
-        <h2>Selected papers.</h2>
-      </div>
-
-      <div class="pub-list">
-        <article class="publication reveal">
-          <div class="pub-year">2026</div>
-          <div>
-            <h3>GAPG: Geometry Aware Push-Grasping Synergy for Goal-Oriented Manipulation in Clutter</h3>
-            <p><strong>Jinhong Du</strong>, et al.</p>
-            <p class="muted">IEEE International Conference on Robotics and Automation (ICRA) · Accepted</p>
-            <div class="inline-links">
-              <a href="YOUR_GAPG_PAPER_URL" target="_blank" rel="noreferrer">Paper ↗</a>
-              <a href="https://github.com/xiaolijz/GAPG" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="publication reveal">
-          <div class="pub-year">RA-L</div>
-          <div>
-            <h3>SuperGrasp: Single-View Object Grasping via Superquadric Similarity Matching, Evaluation, and Refinement</h3>
-            <p><strong>Jinhong Du</strong>, et al.</p>
-            <p class="muted">IEEE Robotics and Automation Letters · Minor Revision</p>
-            <div class="inline-links">
-              <a href="YOUR_SUPERGRASP_PAPER_URL" target="_blank" rel="noreferrer">Paper ↗</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell split-section" id="education">
-      <div>
-        <div class="section-heading reveal">
-          <p class="eyebrow">EDUCATION</p>
-          <h2>Background.</h2>
-        </div>
-
-        <div class="timeline reveal">
-          <article>
-            <span class="date">2024.09 — 2027.06</span>
-            <h3>South China University of Technology</h3>
-            <p>Master's Student · Electronic Information</p>
-            <p class="muted">School of Automation Science and Engineering · Top 10%</p>
-          </article>
-
-          <article>
-            <span class="date">2020.09 — 2024.06</span>
-            <h3>Jinan University</h3>
-            <p>Automation</p>
-            <p class="muted">International Energy College · Top 7%</p>
-          </article>
-        </div>
-      </div>
-
-      <div>
-        <div class="section-heading reveal">
-          <p class="eyebrow">TOOLKIT</p>
-          <h2>Research stack.</h2>
-        </div>
-
-        <div class="skill-groups reveal">
-          <div>
-            <h3>Manipulation</h3>
-            <p>3D point-cloud perception · 7D grasping · grasp generation · evaluation · refinement · push-grasp</p>
-          </div>
-          <div>
-            <h3>Learning</h3>
-            <p>PointNet · PointNet++ · GraspNet · SAC · PPO · TD3 · ACT · Diffusion Policy</p>
-          </div>
-          <div>
-            <h3>Simulation &amp; Deployment</h3>
-            <p>PyBullet · Isaac Gym · ROS · MoveIt · Sim2Real · UR5e · ROKAE xMate ER7Pro</p>
-          </div>
-          <div>
-            <h3>Programming</h3>
-            <p>Python · PyTorch · SolidWorks</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section shell reveal" id="contact">
-      <p class="eyebrow">CONTACT</p>
-      <h2>Interested in robotic manipulation and embodied intelligence.</h2>
-      <p>
-        I am open to research and engineering opportunities in robotic manipulation,
-        3D perception, robot learning, reinforcement learning, and Sim2Real.
-      </p>
-
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:djh020503@gmail.com">d​jh020503@gmail.com</a>
-        <a class="button secondary" href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
-    </section>
+    <footer>
+      <span>Jinhong Du · Last updated 2026</span>
+      <a href="mailto:djh020503@gmail.com">djh020503@gmail.com</a>
+    </footer>
   </main>
-
-  <footer class="footer shell">
-    <p>© <span id="year"></span> Jinhong Du</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
 
   <script src="script.js"></script>
 </body>
