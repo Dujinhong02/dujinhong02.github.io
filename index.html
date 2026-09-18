@@ -1,258 +1,213 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jinhong Du — robotic manipulation, 3D perception, grasping and Sim2Real." />
-  <title>Jinhong Du</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jinhong Du - Robotic Manipulation, 3D Perception, Grasping, Reinforcement Learning, Sim2Real.">
+  <title>Jinhong Du | 杜锦鸿</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
+  <main class="container">
 
-    <!-- =========================================================
-         PROFILE
-         ========================================================= -->
-    <section class="profile">
-      <div class="portrait">
-        <img src="assets/profile-placeholder.svg" alt="Jinhong Du" />
+    <section class="intro">
+      <div class="intro-photo">
+        <img src="assets/profile-placeholder.svg" alt="Jinhong Du">
       </div>
 
-      <div class="bio">
-        <h1>Jinhong Du <span class="cn-name">杜锦鸿</span></h1>
+      <div class="intro-text">
+        <h1>Jinhong Du <span>杜锦鸿</span></h1>
 
         <p>
-          I am a Master's student in the
-          <strong>School of Automation Science and Engineering</strong> at
-          <strong>South China University of Technology</strong>.
+          I am a Master's student in the <strong>School of Automation Science and Engineering</strong>
+          at <strong>South China University of Technology (SCUT)</strong>.
         </p>
 
         <p>
           My research focuses on <strong>robotic manipulation in cluttered environments</strong>,
-          including 3D point-cloud perception, robotic grasping, push-grasp synergy,
+          including 3D point-cloud perception, grasp generation and evaluation, push-grasp synergy,
           reinforcement learning, and Sim2Real deployment.
         </p>
 
         <p>
-          I am interested in building robots that can go beyond passive grasp prediction:
-          when a target is occluded or difficult to grasp, the robot should actively
-          <strong>rearrange the scene and create a better grasp opportunity</strong>.
+          I am particularly interested in enabling robots to move beyond single-step grasp prediction:
+          when direct grasping is unreliable, the robot should actively rearrange the scene and create
+          a better grasp opportunity.
         </p>
 
-        <div class="contact-links">
+        <p class="links">
           <a href="mailto:djh020503@gmail.com">Email</a>
+          <span>/</span>
           <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noreferrer">GitHub</a>
+          <span>/</span>
           <a href="assets/cv.pdf" target="_blank" rel="noreferrer">CV</a>
+          <span>/</span>
           <a href="YOUR_GOOGLE_SCHOLAR_URL" target="_blank" rel="noreferrer">Google Scholar</a>
-        </div>
+        </p>
       </div>
     </section>
 
-    <!-- =========================================================
-         RESEARCH INTERESTS
-         ========================================================= -->
     <section>
       <h2>Research Interests</h2>
-      <ul class="interest-list">
-        <li>
-          <strong>Robotic Grasping:</strong>
-          6D/7D grasp generation, evaluation, refinement, and collision-aware grasping.
-        </li>
-        <li>
-          <strong>Active Manipulation:</strong>
-          push-grasp synergy and goal-oriented non-prehensile manipulation in clutter.
-        </li>
-        <li>
-          <strong>3D Perception:</strong>
-          point-cloud representation, PointNet/PointNet++, GraspNet, and geometric priors.
-        </li>
-        <li>
-          <strong>Robot Learning &amp; Sim2Real:</strong>
-          reinforcement learning, simulation data generation, and real-robot deployment.
-        </li>
+      <ul class="research-list">
+        <li><strong>Robotic Grasping:</strong> 6D/7D grasp generation, evaluation, refinement, and collision-aware grasping.</li>
+        <li><strong>Active Manipulation:</strong> push-grasp synergy and goal-oriented non-prehensile manipulation in clutter.</li>
+        <li><strong>3D Perception:</strong> point clouds, PointNet/PointNet++, GraspNet, and geometry-aware representations.</li>
+        <li><strong>Robot Learning &amp; Sim2Real:</strong> reinforcement learning, simulation data generation, and real-robot deployment.</li>
       </ul>
     </section>
 
-    <!-- =========================================================
-         NEWS
-         ========================================================= -->
     <section>
       <h2>News</h2>
-      <div class="news">
-        <div class="news-row">
-          <span class="news-date">2026</span>
-          <span><strong>GAPG</strong> was accepted by <strong>IEEE ICRA 2026</strong>.</span>
-        </div>
-        <div class="news-row">
-          <span class="news-date">2026</span>
-          <span><strong>SuperGrasp</strong> received <strong>Minor Revision</strong> at IEEE RA-L.</span>
-        </div>
-        <div class="news-row">
-          <span class="news-date">2026.04</span>
-          <span>
-            Started an industry collaboration on highly autonomous robotic picking for
-            large-scale SKUs using UR5e.
-          </span>
-        </div>
+      <div class="news-list">
+        <div class="news-item"><time>2026</time><p><strong>GAPG</strong> was accepted by <strong>IEEE ICRA 2026</strong>.</p></div>
+        <div class="news-item"><time>2026</time><p><strong>SuperGrasp</strong> received <strong>Minor Revision</strong> at IEEE RA-L.</p></div>
+        <div class="news-item"><time>2026.04</time><p>Started an industry collaboration on highly autonomous robotic picking for large-scale SKUs using UR5e.</p></div>
       </div>
     </section>
 
-    <!-- =========================================================
-         SELECTED RESEARCH / PUBLICATIONS
-         ========================================================= -->
-    <section id="publications">
+    <section>
       <h2>Selected Research</h2>
 
-      <!-- GAPG -->
-      <article class="pub">
-        <div class="pub-media video-box">
+      <article class="publication">
+        <div class="media-box">
           <video autoplay muted loop playsinline controls preload="metadata">
-            <source src="assets/gapg/demo.mp4" type="video/mp4" />
+            <source src="assets/gapg/demo.mp4" type="video/mp4">
           </video>
-          <div class="video-placeholder">
+          <div class="missing-media">
             <strong>GAPG Demo</strong>
             <span>assets/gapg/demo.mp4</span>
           </div>
         </div>
 
-        <div class="pub-info">
+        <div class="pub-content">
           <h3>GAPG: Geometry-Aware Push-Grasping Synergy for Goal-Oriented Manipulation in Clutter</h3>
           <p class="authors"><strong>Jinhong Du</strong>, et al.</p>
-          <p class="venue"><strong>IEEE ICRA 2026</strong> · Accepted</p>
+          <p class="venue"><strong>IEEE International Conference on Robotics and Automation (ICRA), 2026</strong> · Accepted</p>
 
-          <p class="description">
-            A geometry-aware push-grasp framework for dense clutter. GAPG jointly evaluates
-            grasp feasibility and pushing benefit, allowing the robot to actively rearrange
-            clutter before grasping the target.
+          <p>
+            A geometry-aware push-grasp framework that jointly evaluates grasp feasibility and pushing benefit,
+            enabling a robot to actively rearrange dense clutter before grasping a target object.
           </p>
 
-          <p class="result">
+          <p class="metrics">
             <strong>&gt;90%</strong> grasp success ·
             <strong>&gt;95%</strong> task completion ·
             zero-shot Sim2Real on ROKAE xMate ER7Pro.
           </p>
 
-          <div class="pub-links">
+          <p class="paper-links">
             <a href="YOUR_GAPG_PAPER_URL" target="_blank" rel="noreferrer">Paper</a>
             <a href="https://github.com/xiaolijz/GAPG" target="_blank" rel="noreferrer">Code</a>
-            <a href="YOUR_GAPG_PROJECT_URL" target="_blank" rel="noreferrer">Project</a>
+            <a href="YOUR_GAPG_PROJECT_URL" target="_blank" rel="noreferrer">Project Page</a>
             <a href="YOUR_GAPG_VIDEO_URL" target="_blank" rel="noreferrer">Video</a>
-          </div>
+          </p>
         </div>
       </article>
 
-      <!-- SUPERGRASP -->
-      <article class="pub">
-        <div class="pub-media video-box">
+      <article class="publication">
+        <div class="media-box">
           <video autoplay muted loop playsinline controls preload="metadata">
-            <source src="assets/supergrasp/demo.mp4" type="video/mp4" />
+            <source src="assets/supergrasp/demo.mp4" type="video/mp4">
           </video>
-          <div class="video-placeholder">
+          <div class="missing-media">
             <strong>SuperGrasp Demo</strong>
             <span>assets/supergrasp/demo.mp4</span>
           </div>
         </div>
 
-        <div class="pub-info">
+        <div class="pub-content">
           <h3>SuperGrasp: Single-View Object Grasping via Superquadric Similarity Matching, Evaluation, and Refinement</h3>
           <p class="authors"><strong>Jinhong Du</strong>, et al.</p>
-          <p class="venue"><strong>IEEE Robotics and Automation Letters</strong> · Minor Revision</p>
+          <p class="venue"><strong>IEEE Robotics and Automation Letters (RA-L)</strong> · Minor Revision</p>
 
-          <p class="description">
-            A single-view point-cloud grasping framework that generates grasp candidates through
-            superquadric similarity matching and evaluates/refines them using an anchor-guided E-RNet.
+          <p>
+            A single-view point-cloud grasping framework that transfers preliminary grasp poses using
+            superquadric similarity matching, then evaluates and refines them with an anchor-guided E-RNet.
           </p>
 
-          <p class="result">
+          <p class="metrics">
             <strong>94.12%</strong> grasp success ·
             <strong>96.00%</strong> task success ·
             <strong>0.713 s</strong> inference time.
           </p>
 
-          <div class="pub-links">
+          <p class="paper-links">
             <a href="YOUR_SUPERGRASP_PAPER_URL" target="_blank" rel="noreferrer">Paper</a>
             <a href="YOUR_SUPERGRASP_CODE_URL" target="_blank" rel="noreferrer">Code</a>
-            <a href="YOUR_SUPERGRASP_PROJECT_URL" target="_blank" rel="noreferrer">Project</a>
+            <a href="YOUR_SUPERGRASP_PROJECT_URL" target="_blank" rel="noreferrer">Project Page</a>
             <a href="YOUR_SUPERGRASP_VIDEO_URL" target="_blank" rel="noreferrer">Video</a>
-          </div>
+          </p>
         </div>
       </article>
 
-      <!-- PUSHPOINT -->
-      <article class="pub">
-        <div class="pub-media video-box">
+      <article class="publication">
+        <div class="media-box">
           <video autoplay muted loop playsinline controls preload="metadata">
-            <source src="assets/pushpoint/demo.mp4" type="video/mp4" />
+            <source src="assets/pushpoint/demo.mp4" type="video/mp4">
           </video>
-          <div class="video-placeholder">
+          <div class="missing-media">
             <strong>SuperGrasp+ / PushPoint Demo</strong>
             <span>assets/pushpoint/demo.mp4</span>
           </div>
         </div>
 
-        <div class="pub-info">
+        <div class="pub-content">
           <h3>SuperGrasp+ &amp; PushPoint: Autonomous Picking for Large-Scale SKU Warehousing</h3>
           <p class="authors"><strong>Project Owner</strong> · Industry Collaboration</p>
           <p class="venue">Robotic Bin Picking · UR5e · 2026–Present</p>
 
-          <p class="description">
+          <p>
             SuperGrasp+ predicts gripper-width correction and collision risk for robust grasping.
             PushPoint uses SAC to learn goal-oriented non-prehensile actions that turn difficult
             grasp states into graspable ones.
           </p>
 
-          <p class="result">
-            <strong>&gt;80%</strong> bin-clear success with grasping only ·
+          <p class="metrics">
+            <strong>&gt;80%</strong> grasp-only bin-clear success ·
             <strong>&gt;95%</strong> with PushPoint ·
             tested on <strong>50+ unseen items</strong>.
           </p>
 
-          <div class="pub-links">
-            <a href="YOUR_PUSHPOINT_PROJECT_URL" target="_blank" rel="noreferrer">Project</a>
+          <p class="paper-links">
+            <a href="YOUR_PUSHPOINT_PROJECT_URL" target="_blank" rel="noreferrer">Project Page</a>
             <a href="YOUR_PUSHPOINT_VIDEO_URL" target="_blank" rel="noreferrer">Video</a>
-          </div>
+          </p>
         </div>
       </article>
     </section>
 
-    <!-- =========================================================
-         EDUCATION
-         ========================================================= -->
     <section>
       <h2>Education</h2>
 
-      <div class="education-row">
+      <div class="education-item">
         <div>
           <strong>South China University of Technology</strong>
-          <div>Master's, Electronic Information · School of Automation Science and Engineering</div>
+          <p>Master's Student, Electronic Information · School of Automation Science and Engineering · Top 10%</p>
         </div>
-        <div class="education-date">2024–2027</div>
+        <time>2024–2027</time>
       </div>
 
-      <div class="education-row">
+      <div class="education-item">
         <div>
           <strong>Jinan University</strong>
-          <div>Bachelor's, Automation · International Energy College</div>
+          <p>Bachelor's, Automation · International Energy College · Top 7%</p>
         </div>
-        <div class="education-date">2020–2024</div>
+        <time>2020–2024</time>
       </div>
     </section>
 
-    <!-- =========================================================
-         SKILLS
-         ========================================================= -->
     <section>
       <h2>Skills</h2>
-      <p class="skills">
-        <strong>Robotics:</strong> 3D point clouds, 7D grasping, GraspNet, ROS, MoveIt, Sim2Real,
-        UR5e, ROKAE xMate ER7Pro<br />
-        <strong>Learning:</strong> PointNet, PointNet++, SAC, PPO, TD3, ACT, Diffusion Policy<br />
-        <strong>Tools:</strong> Python, PyTorch, PyBullet, Isaac Gym, SolidWorks
-      </p>
+      <div class="skills">
+        <p><strong>Robotics:</strong> 3D point clouds, 7D grasping, GraspNet, ROS, MoveIt, Sim2Real, UR5e, ROKAE xMate ER7Pro</p>
+        <p><strong>Learning:</strong> PointNet, PointNet++, SAC, PPO, TD3, ACT, Diffusion Policy</p>
+        <p><strong>Tools:</strong> Python, PyTorch, PyBullet, Isaac Gym, SolidWorks</p>
+      </div>
     </section>
 
     <footer>
-      <span>Jinhong Du · Last updated 2026</span>
+      <span>Jinhong Du · 杜锦鸿</span>
       <a href="mailto:djh020503@gmail.com">djh020503@gmail.com</a>
     </footer>
   </main>

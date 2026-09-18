@@ -1,16 +1,15 @@
-// Show a clean placeholder when a demo file has not been uploaded yet.
-document.querySelectorAll(".video-box").forEach((box) => {
+document.querySelectorAll(".media-box").forEach((box) => {
   const video = box.querySelector("video");
   const source = video?.querySelector("source");
 
-  const missing = () => box.classList.add("missing");
-  const loaded = () => box.classList.remove("missing");
+  const showMissing = () => box.classList.add("missing");
+  const showVideo = () => box.classList.remove("missing");
 
-  video?.addEventListener("loadeddata", loaded);
-  video?.addEventListener("error", missing);
-  source?.addEventListener("error", missing);
+  video?.addEventListener("loadeddata", showVideo);
+  video?.addEventListener("error", showMissing);
+  source?.addEventListener("error", showMissing);
 
   setTimeout(() => {
-    if (video && video.readyState === 0) missing();
-  }, 900);
+    if (video && video.readyState === 0) showMissing();
+  }, 700);
 });

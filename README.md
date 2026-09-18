@@ -1,65 +1,34 @@
-# Jinhong Du — Academic Homepage
+# Jinhong Du — Academic Homepage v2
 
-This version uses a compact robotics/academic-homepage structure:
+This revision is tuned to look like a conventional robotics / academic homepage:
+- readable desktop typography
+- centered 1080px content column
+- profile photo + bio side by side
+- date-aligned News section
+- 320px demo video + publication information side by side
+- mobile stacking only below 650px
 
-1. Profile + short research bio
-2. Research interests
-3. News
-4. Selected research with demo videos
-5. Education
-6. Skills
-
-It is intentionally simple and publication-focused.
-
-## Replace your portrait
-
-The page currently uses:
-
-```text
-assets/profile-placeholder.svg
-```
-
-Put your portrait in `assets/profile.jpg` and change this line in `index.html`:
+## Add your photo
+Put `profile.jpg` in `assets/`, then replace:
 
 ```html
-<img src="assets/profile-placeholder.svg" alt="Jinhong Du" />
+<img src="assets/profile-placeholder.svg" alt="Jinhong Du">
 ```
 
-to:
+with:
 
 ```html
-<img src="assets/profile.jpg" alt="Jinhong Du" />
+<img src="assets/profile.jpg" alt="Jinhong Du">
 ```
-
-A square-ish or portrait photo works best.
 
 ## Add demo videos
+- `assets/gapg/demo.mp4`
+- `assets/supergrasp/demo.mp4`
+- `assets/pushpoint/demo.mp4`
 
-```text
-assets/gapg/demo.mp4
-assets/supergrasp/demo.mp4
-assets/pushpoint/demo.mp4
-```
+## Replace placeholder links
+Search `index.html` for `YOUR_`.
 
-Recommended:
-- MP4 / H.264
-- 4:3 or 16:9
-- about 10–30 seconds
-- compressed for web
-
-## Replace links
-
-Search `index.html` for `YOUR_` and replace the placeholders.
-
-## Deploy
-
-For your current GitHub Pages repository, replace the existing website files with:
-
-```text
-index.html
-style.css
-script.js
-assets/
-```
-
-Commit to `main`. GitHub Pages will redeploy automatically.
+## Publish
+Replace the current files in your `dujinhong02.github.io` repository and commit to `main`.
+GitHub Pages will redeploy automatically.

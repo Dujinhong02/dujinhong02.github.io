@@ -1,1 +1,1 @@
-Put GAPG demo.mp4 here.
+Put your GAPG demo at demo.mp4

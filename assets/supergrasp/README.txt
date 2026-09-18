@@ -1,1 +1,1 @@
-Put SuperGrasp demo.mp4 here.
+Put your SuperGrasp demo at demo.mp4
