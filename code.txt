@@ -1,0 +1,49 @@
+def sample_surface_points(pcd, sence_pcd,expand=0.012,radius_for_mean_z=0.015,step=0.025):
+    points = np.asarray(pcd.points)
+    sence_points = np.asarray(sence_pcd.points)
+    xy = points[:, :2]
+    xy_sence = sence_points[:,:2]
+    resolution = 0.001
+    xy_min = xy.min(axis=0)
+    xy_max = xy.max(axis=0)
+    img_size = np.ceil((xy_max - xy_min) / resolution).astype(int) + 10
+
+    img = np.zeros((img_size[1], img_size[0]), dtype=np.uint8)
+
+    indices = ((xy - xy_min) / resolution).astype(int)
+    img[indices[:, 1], indices[:, 0]] = 255
+
+    # Step 2: Dilate image to ensure continuity (optional but recommended)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+    img_dilated = cv2.dilate(img, kernel, iterations=1)
+
+    # Step 3: Find contours precisely
+    contours, _ = cv2.findContours(img_dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+
+    if len(contours) == 0:
+        raise ValueError("No contours found.")
+
+    max_contour = max(contours, key=cv2.contourArea)
+    contour_pts_image = max_contour[:, 0, :]
+
+    # Step 4: Convert contour points back to real-world coordinates
+    contour_pts_world = contour_pts_image * resolution + xy_min
+
+    # Step 5: Expand polygon
+    poly = Polygon(contour_pts_world)
+
+    offset_polygon = poly.buffer(expand)
+
+    boundary_coords = np.array(offset_polygon.exterior.coords[:-1])  # 去掉闭环重复点
+    push_xy = interpolate_polygon_edges_with_step(boundary_coords,step)
+
+    sampled_points = []
+    for xy_pt in push_xy:
+        dists = np.linalg.norm(xy - xy_pt, axis=1)
+        mask = dists < radius_for_mean_z
+        if np.sum(mask) == 0:
+            continue
+        z_mean = np.mean(points[mask, 2])
+        sampled_points.append([xy_pt[0], xy_pt[1], z_mean])
+
+    return np.array(sampled_points)
