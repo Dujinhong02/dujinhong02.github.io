@@ -82,11 +82,9 @@ section {
 
 .intro {
   display: grid;
-  grid-template-columns: 235px minmax(0, 1fr);
-  gap: 42px;
-  align-items: start;
-  margin-top: 0;
-  margin-bottom: 46px;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 48px;
+  align-items: center;
 }
 
 .intro-photo img {
