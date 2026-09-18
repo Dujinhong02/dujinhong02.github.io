@@ -87,10 +87,16 @@ section {
   align-items: center;
 }
 
+.intro-photo {
+  justify-self: end;
+  width: 220px;
+}
+
 .intro-photo img {
   display: block;
   width: 100%;
-  border-radius: 6px;
+  height: auto;
+  border-radius: 8px;
   border: 1px solid #e4e7eb;
 }
 
