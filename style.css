@@ -6,6 +6,17 @@
   --line: #dfe3e8;
   --soft: #f5f7fa;
 }
+.template-credit {
+  margin-top: 12px;
+  padding-bottom: 24px;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+}
+
+.template-credit a {
+  color: #777;
+}
 .author-highlight {
   color: #b42318;
   font-weight: 600;
