@@ -7,8 +7,31 @@
   --soft: #f5f7fa;
 }
 .author-highlight {
-  color: #c62828;
+  color: #b42318;
   font-weight: 600;
+}
+.equal-contribution {
+  margin-top: 2px !important;
+  font-size: 13px;
+  color: #777;
+}
+.status {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.accepted {
+  color: #16794c;
+  background: #eaf7ef;
+}
+
+.status.review {
+  color: #8a5b00;
+  background: #fff5d6;
 }
 * {
   box-sizing: border-box;
