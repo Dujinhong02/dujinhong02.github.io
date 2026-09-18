@@ -139,7 +139,7 @@ h2 {
   font-size: 30px;
   line-height: 1.25;
   font-weight: 500;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .research-list {
@@ -341,19 +341,15 @@ footer {
 }
 
 @media (max-width: 650px) {
-  .container {
-    width: min(calc(100% - 28px), var(--page-width));
-    padding-top: 24px;
-  }
-
   .intro {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
 
   .intro-photo {
-    width: 170px;
+    width: 160px;
+    justify-self: start;
   }
+}
 
   .intro-text h1 {
     margin-top: 0;
