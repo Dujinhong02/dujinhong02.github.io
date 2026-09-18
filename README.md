@@ -1,4 +1,4 @@
-# Jinhong Du — Academic Homepage v2
+# Jinhong Du
 
 This revision is tuned to look like a conventional robotics / academic homepage:
 - readable desktop typography
