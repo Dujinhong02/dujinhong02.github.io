@@ -195,12 +195,15 @@ h2 {
   background: var(--soft);
 }
 
+
 .media-box video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   background: #eef1f4;
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
 .missing-media {
