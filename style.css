@@ -179,6 +179,9 @@ h2 {
   padding: 28px 0 34px;
   border-bottom: 1px solid #eceff2;
 }
+.equal-contribution + .publication {
+  padding-top: 10px;
+}
 
 .publication:last-child {
   border-bottom: 0;
